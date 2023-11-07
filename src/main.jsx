@@ -5,6 +5,7 @@ import Sidebar from './components/common/Sidebar.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './index.css'
 import ProtectedRoute from './components/common/ProtectedRoute.jsx'
+import PublicRoute from './components/common/PublicRoute.jsx'
 
 const router = createBrowserRouter([
   {
@@ -13,7 +14,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/login",
-    element:  "login"
+    element:  <PublicRoute>"login"</PublicRoute>
   },
 ]);
 

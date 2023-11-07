@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Sidebar from './Sidebar';
+import Header from './Header';
 
 const ProtectedRoute = ({ children , ...rest }) => {
     const navigate = useNavigate();
-    const isAuthenticated = false;
+    const isAuthenticated = true;
 
     useEffect(() => {
         if (!isAuthenticated) {
@@ -15,7 +17,10 @@ const ProtectedRoute = ({ children , ...rest }) => {
         return null;
     }
 
-    return <>{children}</>;
+    return <>   <Sidebar/>
+                <Header/>
+                {children}
+            </>;
 };
 
 export default ProtectedRoute;
