@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
-import Sidebar from './components/common/Sidebar.jsx'
+import {Login} from '@components/forms'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './index.css'
 import ProtectedRoute from './components/common/ProtectedRoute.jsx'
@@ -14,7 +14,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/login",
-    element:  <PublicRoute>"login"</PublicRoute>
+    element:  <PublicRoute><Login/></PublicRoute>
   },
 ]);
 

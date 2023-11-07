@@ -17,10 +17,11 @@ const ProtectedRoute = ({ children , ...rest }) => {
         return null;
     }
 
-    return <>   <Sidebar/>
+    return <div className='protected'>   
+                <Sidebar/>
                 <Header/>
                 {children}
-            </>;
+            </div>;
 };
 
 export default ProtectedRoute;

@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Header from './Header';
 
 const PublicRoute = ({ children }) => {
     const navigate = useNavigate();
-    const isAuthenticated = true; // replace this with your actual authentication check
+    const isAuthenticated = false; // replace this with your actual authentication check
 
     useEffect(() => {
         if (isAuthenticated) {
@@ -11,7 +12,11 @@ const PublicRoute = ({ children }) => {
         }
     }, [isAuthenticated]);
 
-    return isAuthenticated ? null : <>{children}</>;
+    return isAuthenticated ? null :
+            ( <>
+                <Header/>
+                {children}
+                </>);
 };
 
 export default PublicRoute;

@@ -1,6 +1,7 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .side {
@@ -22,8 +23,11 @@
   display: grid;
   align-items: center;
   padding-left: 1rem;
-  margin-left: 70px;
   height: 70px;
   border-bottom: 1px solid;
   border-color: #E2E8F0;
+}
+
+.protected .head{
+  margin-left: 70px;
 }
